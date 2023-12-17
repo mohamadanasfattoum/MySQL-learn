@@ -14,6 +14,6 @@ sql = 'INSERT INTO products(name , description) VALUES(%s ,%s)'
 data = ('xiaomi 12t' , 'Spitzenkameras, erstklassige Displays und hohe Geschwindigkeit: Xiaomi Handys punkten in jeder Hinsicht.')
 
 mycursor.execute(sql , data)
-
+myconn.commit() # to save data in database
 
 print ('insert was successfully')
