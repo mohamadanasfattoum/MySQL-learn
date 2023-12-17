@@ -1,4 +1,4 @@
-from .secrets import DATABASE_PASSWORD
+from project.secrets import DATABASE_PASSWORD
 import mysql.connector
 
 myconn = mysql.connector.connect(
