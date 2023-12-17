@@ -11,9 +11,11 @@ myconn = mysql.connector.connect(
 mycursor = myconn.cursor()
 
 sql = 'INSERT INTO products(name , description) VALUES(%s ,%s)'
-data = ('xiaomi 12t' , 'Spitzenkameras, erstklassige Displays und hohe Geschwindigkeit: Xiaomi Handys punkten in jeder Hinsicht.')
+data = ('xiaomi 13 t' , 'Die besten Xiaomi Handys finden sich in der Xiaomi 13-Serie')
 
 mycursor.execute(sql , data)
-myconn.commit() # to save data in database
+myconn.commit() # to save data in databases
 
 print ('insert was successfully')
+
+print(mycursor.rowcount) # Retrieve the number of rows affected
