@@ -12,7 +12,7 @@ myconn = mysql.connector.connect(
 mycursor = myconn.cursor()
 
 
-cursorobject.execute('CREATE DATABASE')
+
 
 
 print('All Done!')
