@@ -5,12 +5,12 @@ myconn = mysql.connector.connect(
     host="localhost" ,
     user = "root" ,
     passwd = DATABASE_PASSWORD, 
-    database = 'mysql'
+    # database = 'mysql'
 )
 
 
 mycursor = myconn.cursor()
-mycursor.execute(" CREATE DATABASE mydatabase ")
+mycursor.execute(" CREATE DATABASE mydb ")
 
 
 
