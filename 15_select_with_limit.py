@@ -10,7 +10,9 @@ myconn = mysql.connector.connect(
 
 mycursor = myconn.cursor()
 
-mycursor.execute(' SELECT * FROM products  LIMIT 5') # descent ترتيب تنازلي 
+
+# mycursor.execute(' SELECT * FROM products  LIMIT 5 ')
+mycursor.execute(' SELECT * FROM products  LIMIT 5 OFFSET 2 ') # descent ترتيب تنازلي 
 
 myresult = mycursor.fetchall()
 
