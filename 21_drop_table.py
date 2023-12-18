@@ -11,8 +11,8 @@ myconn = mysql.connector.connect(
 mycursor = myconn.cursor()
 
 
-mycursor.execute('DROP TABLE brand') 
-# mycursor.execute('DROP TABLE IF EXIST') 
+# mycursor.execute('DROP TABLE brand') # delete the table
+mycursor.execute('DROP TABLE IF EXISTS brand') 
 
 
 myconn.commit()
