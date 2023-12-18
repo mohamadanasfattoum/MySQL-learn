@@ -11,9 +11,10 @@ myconn = mysql.connector.connect(
 mycursor = myconn.cursor()
 
 
-mycursor.execute(' SELECT * FROM products ')
+# mycursor.execute(' SELECT * FROM products ')
+mycursor.execute(' SELECT name FROM products ') # just name
 
-myresult = mycursor.fetchall()
+myresult = mycursor.fetchall() 
 
 for product in myresult:
     print(product)
