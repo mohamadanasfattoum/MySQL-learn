@@ -15,7 +15,10 @@ mycursor = myconn.cursor()
 # mycursor.execute(' SELECT name , description FROM products ') # just name
 mycursor.execute(' SELECT name FROM products ') # just name
 
-myresult = mycursor.fetchall() # to print one from all
-print (myresult[2])
+# myresult = mycursor.fetchall() # to print one from all
+# print (myresult[2])
+
+myresult = mycursor.fetchone() # to print one from all
+print (myresult)
 
 print ('selected successfully')
