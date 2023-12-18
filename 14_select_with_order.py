@@ -10,9 +10,10 @@ myconn = mysql.connector.connect(
 
 mycursor = myconn.cursor()
 
-mycursor.execute(' SELECT * FROM products ORDER BY name ')
-# mycursor.execute(' SELECT * FROM products ORDER BY id ')
+# mycursor.execute(' SELECT * FROM products ORDER BY name ') # تلقائي ترتيب تصاعدي
+# mycursor.execute(' SELECT * FROM products ORDER BY id ') # by default aescent
 # mycursor.execute(' SELECT * FROM products ORDER BY description ')
+mycursor.execute(' SELECT * FROM products ORDER BY id DESC ') # descent ترتيب تنازلي 
 
 myresult = mycursor.fetchall()
 
