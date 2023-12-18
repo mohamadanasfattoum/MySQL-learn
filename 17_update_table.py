@@ -11,7 +11,10 @@ myconn = mysql.connector.connect(
 mycursor = myconn.cursor()
 
 
-mycursor.execute('UPDATE products SET price = "400" WHERE name = "xiaomi 12t" ')
+# mycursor.execute('UPDATE products SET price = "400" WHERE name = "xiaomi 12t" ')
+
+mycursor.execute('UPDATE products SET price = "400" ')
+
 
 myconn.commit()
 
