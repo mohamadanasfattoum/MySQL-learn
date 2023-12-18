@@ -11,9 +11,9 @@ myconn = mysql.connector.connect(
 mycursor = myconn.cursor()
 
 
-mycursor.execute('ALTER TABLE products ADD COLUMN price VARCHAR(20)')
-# mycursor.execute('')
+# mycursor.execute('ALTER TABLE products ADD COLUMN price VARCHAR(20)')
+mycursor.execute('ALTER TABLE products CHANGE COLUMN price price VARCHAR(40)')
+myconn.commit()
 
-
-print ('add column was successfully')
+print ('change VARCHAR column was successfully')
 
