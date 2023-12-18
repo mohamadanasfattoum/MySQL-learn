@@ -10,8 +10,13 @@ myconn = mysql.connector.connect(
 
 mycursor = myconn.cursor()
 
-mycursor.execute(' DELETE FROM products WHERE name = "samsung a 52 s" ')
+# mycursor.execute(' DELETE FROM products WHERE name = "samsung a 52 s" ')
 
+
+sql = ' DELETE FROM products WHERE name =%s '
+data = ('samsung a 54',)
+
+mycursor.execute(sql , data) # with user input
 
 myconn.commit()
 
