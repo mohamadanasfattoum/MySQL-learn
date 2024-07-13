@@ -10,13 +10,17 @@ myconn = mysql.connector.connect(
 
 mycursor = myconn.cursor()
 # mycursor.execute('SELECT * FROM cars') # to show all selected data 
+# ----------
 mycursor.execute('SELECT name FROM cars') # to show just selected column name
+# ----------
+
+
 
 
 myresult = mycursor.fetchall()
-
-for _ in myresult:
-    print (_)
+print(myresult[0]) # to print just one with index number
+# for _ in myresult:
+#     print (_)
 
 
 
