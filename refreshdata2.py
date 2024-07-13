@@ -27,7 +27,10 @@ mycursor = myconn.cursor()
 # mycursor.execute('SELECT * FROM cars WHERE id = 1') 
 # mycursor.execute('SELECT * FROM cars WHERE name = "BMW"')  
 # 4 ---------------- with like
-mycursor.execute('SELECT * FROM cars WHERE name like"%1%"')  
+# mycursor.execute('SELECT * FROM cars WHERE name like"%1%"')  
+# 5 --------------
+mycursor.execute('SELECT * FROM cars ORDER BY name ')  # ORDER BY name
+ 
 
 
 
