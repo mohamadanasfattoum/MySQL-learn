@@ -33,7 +33,9 @@ mycursor = myconn.cursor()
 # mycursor.execute('SELECT * FROM cars ORDER BY name DESC ')  # ORDER BY name DESC
 
 # 6 ---------------------
-mycursor.execute('SELECT * FROM cars LIMIT 5 ') # with limit number
+# mycursor.execute('SELECT * FROM cars LIMIT 5 ') # with limit number
+mycursor.execute('SELECT * FROM cars LIMIT 5 OFFSET 3 ') # with limit number with OFFSET 
+
  
 
 
