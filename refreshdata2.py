@@ -25,7 +25,7 @@ mycursor = myconn.cursor()
 
 # 3 ---------------- WHERE
 # mycursor.execute('SELECT * FROM cars WHERE id = 1') 
-mycursor.execute('SELECT * FROM cars WHERE name = "BMW"') 
+mycursor.execute('SELECT * FROM cars WHERE name = "BMW"')  
 
 
 myresult = mycursor.fetchone() 
