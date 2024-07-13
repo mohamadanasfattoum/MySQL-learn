@@ -50,4 +50,4 @@ mycursor.execute(sql, data)
 myconn.commit() # to save data in databases
 print('All Done!')
 # print(mycursor.rowcount) # Returns the number of rows produced or affected
-print(mycursor.lastrowid) # Output 13 # last id number
+# print(mycursor.lastrowid) # Output 13 # last id number
