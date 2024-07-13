@@ -26,9 +26,9 @@ mycursor = myconn.cursor()
 
 # 4 -------------------  # INSERT INTO
 
-# sql = "INSERT INTO cars (name , plot) VALUES(%s ,%s)"
-# data = ('BMW','Lorem ipsum dolor sit amet cta laboriosam alias, unde illum aliquid a!')
-# mycursor.execute(sql, data)
+sql = "INSERT INTO cars (name , plot) VALUES(%s ,%s)"
+data = ('BMW','Lorem ipsum dolor sit amet cta laboriosam alias, unde illum aliquid a!')
+mycursor.execute(sql, data)
 
 # 5 ----------------------  # INSERT many, executemany
 
@@ -36,9 +36,18 @@ mycursor = myconn.cursor()
 # data = [('BMW','Lorem ipsum dolor sit amet aliquid a!'),('BMW1','Lorem ipsum dolor sit amet aliquid a!'),('BMW2','Lorem ipsum dolor sit amet aliquid a!')]
 # mycursor.executemany(sql, data)
 
-mycursor.execute(" ALTER TABLE cars ADD id INT AUTO_INCREMENT PRIMARY KEY ") # creat id column
+
+
+# 6 ----------------- 
+# mycursor.execute(" ALTER TABLE cars ADD id INT AUTO_INCREMENT PRIMARY KEY ") # creat id column
+
+# 7 ------------------ Delete COLUMN id
+
+mycursor.execute("ALTER TABLE cars DROP COLUMN id") # Delete COLUMN id
+
 
 
 myconn.commit() # to save data in databases
 print('All Done!')
 # print(mycursor.rowcount) # Returns the number of rows produced or affected
+print(mycursor.lastrowid)
