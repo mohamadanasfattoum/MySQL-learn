@@ -36,8 +36,9 @@ mycursor = myconn.cursor()
 # data = [('BMW','Lorem ipsum dolor sit amet aliquid a!'),('BMW1','Lorem ipsum dolor sit amet aliquid a!'),('BMW2','Lorem ipsum dolor sit amet aliquid a!')]
 # mycursor.executemany(sql, data)
 
+mycursor.execute(" ALTER TABLE cars ADD id INT AUTO_INCREMENT PRIMARY KEY ") # creat id column
 
 
 myconn.commit() # to save data in databases
 print('All Done!')
-print(mycursor.rowcount) # Returns the number of rows produced or affected
+# print(mycursor.rowcount) # Returns the number of rows produced or affected
