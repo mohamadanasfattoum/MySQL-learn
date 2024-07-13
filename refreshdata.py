@@ -20,11 +20,16 @@ mycursor = myconn.cursor()
 #     print(db)
 
 # 3 -------------------  
-mycursor.execute(" CREATE TABLE cars (name VARCHAR(100) , plot VARCHAR(500)) ")
+# mycursor.execute(" CREATE TABLE cars (name VARCHAR(100) , plot VARCHAR(500)) ")
 
+# print ('table created successfully')
 
-print ('table created successfully')
+# 4 -------------------  # INSERT INTO
 
+sql = "INSERT INTO cars (name , plot) VALUES(%s ,%s)"
+data = ('BMW','Lorem ipsum dolor sit amet cta laboriosam alias, unde illum aliquid a!')
 
+mycursor.execute(sql, data)
+myconn.commit() # to save data in databases
 
 print('All Done!')
