@@ -11,7 +11,8 @@ myconn = mysql.connector.connect(
 mycursor = myconn.cursor()
 
 
-mycursor.execute('SELECT COUNT(*) FROM products') 
+mycursor.execute('SELECT * FROM products') 
+
 myresult = mycursor.fetchone()
 print (myresult)
 

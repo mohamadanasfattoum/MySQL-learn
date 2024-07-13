@@ -9,7 +9,9 @@ myconn = mysql.connector.connect(
 )
 
 mycursor = myconn.cursor()
-mycursor.execute('SELECT * FROM cars') # to show all selected data 
+# mycursor.execute('SELECT * FROM cars') # to show all selected data 
+mycursor.execute('SELECT name FROM cars') # to show just selected column name
+
 
 myresult = mycursor.fetchall()
 
