@@ -30,8 +30,10 @@ mycursor = myconn.cursor()
 # mycursor.execute('SELECT * FROM cars WHERE name like"%1%"')  
 # 5 --------------
 # mycursor.execute('SELECT * FROM cars ORDER BY name ')  # ORDER BY name
-mycursor.execute('SELECT * FROM cars ORDER BY name DESC ')  # ORDER BY name DESC
+# mycursor.execute('SELECT * FROM cars ORDER BY name DESC ')  # ORDER BY name DESC
 
+# 6 ---------------------
+mycursor.execute('SELECT * FROM cars LIMIT 5 ') # with limit number
  
 
 
