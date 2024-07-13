@@ -29,7 +29,7 @@ mycursor = myconn.cursor()
 # sql = "INSERT INTO cars (name , plot) VALUES(%s ,%s)"
 # data = ('BMW','Lorem ipsum dolor sit amet cta laboriosam alias, unde illum aliquid a!')
 
-# 5 ----------------------  # INSERT many
+# 5 ----------------------  # INSERT many, executemany
 
 sql = "INSERT INTO cars (name , plot) VALUES(%s ,%s)"
 data = [('BMW','Lorem ipsum dolor sit amet aliquid a!'),('BMW1','Lorem ipsum dolor sit amet aliquid a!'),('BMW2','Lorem ipsum dolor sit amet aliquid a!')]
