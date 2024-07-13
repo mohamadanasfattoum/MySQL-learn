@@ -26,10 +26,17 @@ mycursor = myconn.cursor()
 
 # 4 -------------------  # INSERT INTO
 
-sql = "INSERT INTO cars (name , plot) VALUES(%s ,%s)"
-data = ('BMW','Lorem ipsum dolor sit amet cta laboriosam alias, unde illum aliquid a!')
+# sql = "INSERT INTO cars (name , plot) VALUES(%s ,%s)"
+# data = ('BMW','Lorem ipsum dolor sit amet cta laboriosam alias, unde illum aliquid a!')
 
-mycursor.execute(sql, data)
+# 5 ----------------------  # INSERT many
+
+sql = "INSERT INTO cars (name , plot) VALUES(%s ,%s)"
+data = [('BMW','Lorem ipsum dolor sit amet aliquid a!'),('BMW1','Lorem ipsum dolor sit amet aliquid a!'),('BMW2','Lorem ipsum dolor sit amet aliquid a!')]
+mycursor.executemany(sql, data)
+
+
+# mycursor.execute(sql, data)
 myconn.commit() # to save data in databases
 
 print('All Done!')
