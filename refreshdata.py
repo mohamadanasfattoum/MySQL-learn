@@ -43,11 +43,11 @@ mycursor.execute(sql, data)
 
 # 7 ------------------ Delete COLUMN id
 
-mycursor.execute("ALTER TABLE cars DROP COLUMN id") # Delete COLUMN id
+# mycursor.execute("ALTER TABLE cars DROP COLUMN id") # Delete COLUMN id
 
 
 
 myconn.commit() # to save data in databases
 print('All Done!')
 # print(mycursor.rowcount) # Returns the number of rows produced or affected
-print(mycursor.lastrowid)
+print(mycursor.lastrowid) # Output 13 # last id number
