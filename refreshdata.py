@@ -10,7 +10,15 @@ myconn = mysql.connector.connect(
 
 mycursor = myconn.cursor()
 
-mycursor.execute(" CREATE DATABASE refresh ")
+# mycursor.execute(" CREATE DATABASE refresh ") # 1
+
+# 2  SHOW DATABASES
+mycursor.execute(" SHOW DATABASES ")
+
+
+for db in mycursor:
+    print(db)
+
 
 
 
