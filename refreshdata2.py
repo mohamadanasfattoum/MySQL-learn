@@ -11,7 +11,7 @@ myconn = mysql.connector.connect(
 mycursor = myconn.cursor()
 # mycursor.execute('SELECT * FROM cars') # to show all selected data 
 # ----------
-mycursor.execute('SELECT name FROM cars') # to show just selected column name
+# mycursor.execute('SELECT name FROM cars') # to show just selected column name
 # ----------
 
 # myresult = mycursor.fetchall()
@@ -19,8 +19,17 @@ mycursor.execute('SELECT name FROM cars') # to show just selected column name
 # for _ in myresult:
 #     print (_)
 
-# 2 -------------- 
-myresult = mycursor.fetchone() # with fetchone
+# # 2 -------------- 
+# myresult = mycursor.fetchone() # with fetchone
+# print(myresult)
+
+# 3 ---------------- WHERE
+# mycursor.execute('SELECT * FROM cars WHERE id = 1') 
+mycursor.execute('SELECT * FROM cars WHERE name = "BMW"') 
+
+
+myresult = mycursor.fetchone() 
 print(myresult)
+
 
 print('All Done!')
