@@ -14,14 +14,13 @@ mycursor = myconn.cursor()
 mycursor.execute('SELECT name FROM cars') # to show just selected column name
 # ----------
 
-
-
-
-myresult = mycursor.fetchall()
-print(myresult[0]) # to print just one with index number
+# myresult = mycursor.fetchall()
+# print(myresult[0]) # to print just one with index number
 # for _ in myresult:
 #     print (_)
 
-
+# 2 -------------- 
+myresult = mycursor.fetchone() # with fetchone
+print(myresult)
 
 print('All Done!')
