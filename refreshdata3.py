@@ -9,7 +9,8 @@ myconn = mysql.connector.connect(
 )
 
 mycursor = myconn.cursor()
-mycursor.execute('ALTER TABLE cars ADD COLUMN color VARCHAR(30) ') # add neu COLUMN
+# mycursor.execute('ALTER TABLE cars ADD COLUMN color VARCHAR(30) ') # add neu COLUMN
+mycursor.execute('ALTER TABLE cars CHANGE color color VARCHAR(50) ') # CHANGE VARCHAR
 
 
 myconn.commit()
