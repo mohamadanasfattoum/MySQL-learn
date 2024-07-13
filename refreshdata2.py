@@ -25,11 +25,15 @@ mycursor = myconn.cursor()
 
 # 3 ---------------- WHERE
 # mycursor.execute('SELECT * FROM cars WHERE id = 1') 
-mycursor.execute('SELECT * FROM cars WHERE name = "BMW"')  
+# mycursor.execute('SELECT * FROM cars WHERE name = "BMW"')  
+# 4 ---------------- with like
+mycursor.execute('SELECT * FROM cars WHERE name like"%1%"')  
 
 
-myresult = mycursor.fetchone() 
-print(myresult)
+
+myresult = mycursor.fetchall() 
+for _ in myresult:
+    print(_)
 
 
 print('All Done!')
