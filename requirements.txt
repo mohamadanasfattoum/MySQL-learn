@@ -1,6 +1,6 @@
 asgiref==3.7.2
 Django==5.0
 mysql-connector-python==8.2.0
-protobuf==4.21.12
+protobuf==5.29.6
 sqlparse==0.4.4
 tzdata==2023.3
