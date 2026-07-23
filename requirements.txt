@@ -1,5 +1,5 @@
 asgiref==3.7.2
-Django==5.0
+Django==5.1.15
 mysql-connector-python==8.2.0
 protobuf==4.21.12
 sqlparse==0.4.4
